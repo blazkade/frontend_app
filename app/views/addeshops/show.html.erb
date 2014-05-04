@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>URL adresa eshopu:</strong>
+  <%= @addeshop.eshopAddress %>
+</p>
+<p>
+	<strong>Stav požadavku:</strong> 	
+  	<%= @addeshop.status %>
+</p>
+<p>
+	<strong>Odpověď na požadavek:</strong> 	
+  	<%= @addeshop.response %>
+</p>
+<%= link_to 'Edit', edit_addeshop_path(@addeshop) %> |
+<%= link_to 'Back', addeshops_path %>

@@ -1,0 +1,33 @@
+<h1>Přidávání eshopů</h1>
+<br>
+
+<%= link_to 'Přidat nový eshop', new_addeshop_path %>
+
+<h1>Databáze eshopů</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>URL adresa eshopu</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+    <% @addeshops.each do |addeshop| %>
+      <tr>
+        <td><%= addeshop.eshopAddress %></td>
+        <td><%= addeshop.status %></td>
+        <td><%= addeshop.response %></td>
+        <td><%= link_to 'Show', addeshop %></td>
+        <td><%= link_to 'Edit', edit_addeshop_path(addeshop) %></td>
+        <td><%= link_to 'Destroy', addeshop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

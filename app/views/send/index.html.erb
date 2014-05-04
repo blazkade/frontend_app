@@ -1,0 +1,8 @@
+<h1>test odesilani dat do databaze</h1>
+<%= link_to 'test', :action => 'data' %>
+
+<h2>Seznam eshopu</h2>
+<% @addeshops.each do |eshop| %>
+<%= eshop.eshopAddress %>
+<br>
+<% end %>

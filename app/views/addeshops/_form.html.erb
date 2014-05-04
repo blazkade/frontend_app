@@ -1,0 +1,21 @@
+<%= form_for(@addeshop) do |f| %>
+  <% if @addeshop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@addeshop.errors.count, "error") %> prohibited this addeshop from being saved:</h2>
+
+      <ul>
+      <% @addeshop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :'url adresa eshopu' %><br>
+    <%= f.text_field :eshopAddress %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

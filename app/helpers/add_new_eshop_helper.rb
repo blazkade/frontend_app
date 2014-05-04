@@ -1,0 +1,2 @@
+module AddNewEshopHelper
+end
